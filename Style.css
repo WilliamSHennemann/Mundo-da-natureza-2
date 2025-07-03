@@ -1,0 +1,205 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+body {
+  font-size: 2vmin;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+}
+
+header {
+  background-image: url('img/shutterstock_2261596665-1.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 8vmin 3vmin;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vmin;
+  transition: background-image 1s ease;
+}
+
+header:hover {
+  background-image: url('img/Captura-de-Tela-2023-10-12-às-11.47.26_Easy-Resize.com_.jpg');
+}
+
+.logo{
+  display: flex;
+  top: 0.3vmin;
+  left: 0.3vmin;
+  position: absolute;
+}
+
+nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 5vmin 0;
+}
+
+.uli {
+font-family: 'Times New Roman', Times, serif;
+list-style: none;
+display: flex;
+align-items: center;
+text-decoration: none;
+font-weight: bold;
+top: 2vmin;
+right: 1vmin;
+position: absolute;
+}
+
+.uli li {
+margin: 0 1vmin;
+font-size: 18px;
+}
+
+.uli li a {
+color: white;
+text-decoration: none;
+}
+
+.uli li a:hover {
+  color: black;
+}
+
+.cabeçario {
+  justify-content: center;
+  height: 10vmax;
+  max-width: 70vmax;
+  gap: 2vmin;
+}
+
+.cabeçario h1 {
+  font-size: 5vmin;
+  margin-bottom: 2vmin;
+  color: white;
+}
+
+.cabeçario p {
+  font-size: 3vmin;
+  margin-bottom: 4vmin;
+  color: white;
+}
+
+
+
+.informaçoes {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "sidebar"
+    "form"
+    "footer";
+  grid-template-columns: 100%;
+  gap: 3vmin;
+  padding: 3vmin;
+}
+
+
+main {
+  grid-area: main;
+  background-color: white;
+  padding: 3vmin;
+  border-radius: 2vmin;
+  box-shadow: 0 0 2vmin rgba(0, 0, 0, 0.1);
+}
+
+aside {
+  grid-area: sidebar;
+  background-color: #e3edf7;
+  padding: 3vmin;
+  border-radius: 2vmin;
+}
+.form{
+    grid-area: form;
+    justify-items: center;
+}
+fieldset{
+    border: 0;
+}
+input {
+    padding: 2vmin;
+    width: 40vmin;
+    margin-bottom: 2vmin;
+    border-radius: 3vmin;
+    margin-top: 0.5vmin;
+    border: 0.2vmin solid black;
+    margin-left: 2vmin;
+}
+
+.enviar {
+    padding: 1.5vmin;
+    margin-left: 3vmin;
+    width: 30vmin;
+    color: rgb(255, 255, 255);
+    font-size: 3vmin;
+    background-color: gray;
+}
+
+fieldset {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    align-self: center;
+}
+
+.interesses {
+    margin-left: -15vmin;
+}
+
+.interessesdois {
+    margin-left: -16vmin;
+    font-size: 2.5vmin;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #0057a3;
+  color: white;
+  text-align: center;
+  padding: 3vmin;
+  border-radius: 2vmin;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+}
+.footer1{
+    display: flex;
+}
+
+.footer2{
+    display: flex;
+}
+
+.footer3{
+    display: flex;
+}
+
+
+@media (min-width: 600px) {
+  .container {
+    grid-template-areas:
+      "header header"
+      "main sidebar"
+      "form form"
+      "footer footer";
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: 3fr 1fr;
+  }
+}
+
+h1, h2 {
+  margin-top: 0;
+}
